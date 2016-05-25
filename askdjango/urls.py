@@ -21,8 +21,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$','blog.views.index'),
-    url(r'^(?P(pk)\d+/$', 'blog.views.post_detail')),
-    url(r'^(?P(pk)\d+)/edit$', 'blog.views.post_edit'),
+    url(r'^(?P<pk>\d+)/$', 'blog.views.post_detail'),
+    url(r'^(?P<pk>\d+)/edit$', 'blog.views.post_edit'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
